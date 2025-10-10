@@ -5,6 +5,9 @@ import { betterAuth } from "better-auth";
 import type { DataModel } from "../../_generated/dataModel";
 import { requireEnv } from "../../util";
 import { authComponent } from "./component";
+// these two  imports need to be added for email and password to work
+import { sendResetPassword } from "../resend/emails";
+import { requireActionCtx } from "@convex-dev/better-auth/utils";
 /**
  * NOTE:
  * This createAuth is needed for integrating Convex with Better Auth,
